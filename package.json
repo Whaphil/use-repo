@@ -1,0 +1,40 @@
+{
+  "name": "use-repo",
+  "version": "0.1.0",
+  "description": "Interact with databases via http/https requests or write your own getter functions to abstract away those pesky CRUD operations",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Whaphil/use-repo.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "database-interaction",
+    "repository",
+    "htpp requests"
+  ],
+  "files": ["lib/**/*"],
+  "author": "https://github.com/Whaphil",
+  "license": "MIT",
+  "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+  "lint": "tslint -p tsconfig.json",
+  "bugs": {
+    "url": "https://github.com/Whaphil/use-repo/issues"
+  },
+  "homepage": "https://github.com/Whaphil/use-repo#readme",
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.5.5"
+  }
+}
