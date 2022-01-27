@@ -1,0 +1,1 @@
+export const Grüßer = (name:string) => "Seid gegrüßt " + name + "!";
